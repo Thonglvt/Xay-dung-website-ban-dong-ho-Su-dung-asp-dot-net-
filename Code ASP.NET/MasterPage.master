@@ -1,0 +1,226 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Shop đồng hồ T&TShop</title>
+    <meta charset="utf-8"/>
+    <%--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>--%>
+    <link type="text/css" href='css/style.css' rel='stylesheet'/>
+
+    <%--link icon--%>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        .body {
+            margin:0;        
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+    <div style="margin-bottom:2px; background-color:#96a3a1; height:50px;">
+        <div style="float:left; margin-left:200px;margin-top:5px;">
+            <%--<asp:HyperLink ID="HyperLink1" runat="server" ImageHeight="50px" ImageUrl="~/img/name6.jpg" ImageWidth="200px" Font-Bold="False" NavigateUrl="~/TrangChu.aspx"></asp:HyperLink>--%>
+            <asp:HyperLink ID="HyperLink3" runat="server" ImageHeight="45px" ImageUrl="~/img/name9.gif" ImageWidth="200px" Font-Bold="False" NavigateUrl="~/TrangChu.aspx"></asp:HyperLink>
+        </div>
+        <div class="menu_left">
+            <table>
+                <tr>
+                    <td><asp:TextBox ID="txt_search" runat="server" Height="25px" Width="326px"></asp:TextBox></td>
+                    <td><asp:ImageButton ID="imgb_search" runat="server" ImageUrl="~/img/imgSearch.jpg" Height="29px" Width="48px" ImageAlign="Top" OnClick="imgb_search_Click" /> </td>
+                </tr>
+            </table>
+                 
+            <%--<asp:Button  ID="Button1" runat="server" Text="Tìm Kiếm"  Height="30px" OnClick="Button1_Click" />--%>
+        </div>
+        <a class="fas fa-cart-arrow-down" href="GioHang.aspx"  style="text-decoration:none;font-size:larger;margin-top:17px;margin-left:20px; margin-right:180px; color:white;">&nbsp;Giỏ hàng</a>
+        <a class="far fa-user" style="text-decoration:none;font-size:18px; color:black;">&nbsp;</a>
+        <%--<a class="button1" id="namedcolors" href="DangNhap.aspx">ĐĂNG NHẬP</a>&nbsp;<span style="color:white;">||</span>
+        <a class="button1" id="namedcolors" href="DangKi.aspx">ĐĂNG KÍ</a>--%>
+        <asp:HyperLink ID="hyp_user" runat="server" NavigateUrl="~/KhachHang.aspx"></asp:HyperLink>
+        <%--<asp:Label ID="lb_user" runat="server" ForeColor="Blue"></asp:Label>&nbsp;&nbsp;--%>
+        <asp:Button ID="btn_dangXuat" runat="server" Text="Đăng xuất" OnClick="btn_dangXuat_Click" />
+        <asp:Button ID="btn_dangNhap" runat="server" Text="Đăng Nhập"  CssClass="button1" Height="30px" OnClick="btn_dangNhap_Click"/>
+        <asp:Button ID="btn_dangKy" runat="server" Text="Đăng Ký" CssClass="button1" Height="30px" OnClick="btn_dangKy_Click" />
+        
+    </div>
+    <div id="menu">
+        <div style="float:left">
+            <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Font-Size="21px" Height="22px" Orientation="Horizontal" EnableTheming="True" ForeColor="White" StaticEnableDefaultPopOutImage="False" RenderingMode="List">
+                <DynamicHoverStyle ForeColor="#FF3300" />
+                <DynamicMenuItemStyle BorderStyle="None" Font-Size="Large" VerticalPadding="5px" ForeColor="Blue" />
+                <DynamicMenuStyle BackColor="#CCCCCC" />
+                <StaticHoverStyle ForeColor="#CC0000" />
+                <StaticMenuItemStyle HorizontalPadding="20px" />
+                <StaticMenuStyle Width="400px" />
+            </asp:Menu>
+            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+        </div>
+        <div style="float:right; margin-right:20px;"><a style="color:white;" href="DangNhapAdmin.aspx">Admin</a></div>
+    </div>
+    
+        
+    <div id="banner">
+        <asp:Image ID="Image1" runat="server" Height="350px" ImageUrl="~/img/banner2.jpg" Width="1400px" />
+    </div>
+    <div class="left">
+        
+        THƯƠNG HIỆU <br />
+        <asp:CheckBoxList ID="cbl_ThuongHieu" runat="server" DataSourceID="SqlDataSource1" DataTextField="tenTH" DataValueField="tenTH">
+        </asp:CheckBoxList>     
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:QL_DONGHOConnectionString %>" SelectCommand="ten_thuongHieu" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+        <br />MỨC GIÁ<br />
+        <asp:CheckBoxList ID="cbl_MucGia" runat="server">
+            <asp:ListItem>0 ₫ - 2.000.000 ₫</asp:ListItem>
+            <asp:ListItem>2.000.000 ₫ - 4.000.000 ₫</asp:ListItem>
+            <asp:ListItem>4.000.000 ₫ - 6.000.000 ₫</asp:ListItem>
+            <asp:ListItem>6.000.000 ₫ - 8.000.000 ₫</asp:ListItem>
+            <asp:ListItem>8.000.000 ₫ - 10.000.000 ₫</asp:ListItem>
+            <asp:ListItem>10.000.000 ₫ - 20.000.000 ₫</asp:ListItem>
+            <asp:ListItem>20.000.000 ₫ - 30.000.000 ₫</asp:ListItem>
+            <asp:ListItem>30.000.000 ₫ - 40.000.000 ₫</asp:ListItem>
+        </asp:CheckBoxList>
+        <br /><br />CHẤT LIỆU MẶT KÍNH<br />
+        <asp:CheckBoxList ID="cbl_Kinh" runat="server" DataSourceID="SqlDataSource2" DataTextField="Kinh" DataValueField="Kinh"></asp:CheckBoxList>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:QL_DONGHOConnectionString %>" SelectCommand="pro_Kinh" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+        <br /><br />BỘ MÁY & NĂNG LƯỢNG<br />
+        <asp:CheckBoxList ID="cbl_May" runat="server" DataSourceID="SqlDataSource3" DataTextField="May" DataValueField="May"></asp:CheckBoxList>
+        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:QL_DONGHOConnectionString %>" SelectCommand="pro_BoMay" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+        <br /><br />MÀU MẶT SỐ<br />
+        <asp:CheckBoxList ID="cbl_MauMatSo" runat="server" DataSourceID="SqlDataSource4" DataTextField="MauMatSo" DataValueField="MauMatSo"></asp:CheckBoxList>
+        <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:QL_DONGHOConnectionString %>" SelectCommand="pro_MauMatDH" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+        <br /><br />KÍCH THƯỚC MẶT SỐ<br />
+        <asp:CheckBoxList ID="cbl_kichThuocMatSo" runat="server">
+            <asp:ListItem>&lt; 29 mm</asp:ListItem>
+            <asp:ListItem>30 - 34 mm</asp:ListItem>
+            <asp:ListItem>35 - 39 mm</asp:ListItem>
+            <asp:ListItem>40 - 43 mm</asp:ListItem>
+            <asp:ListItem>&gt; 44 mm</asp:ListItem>
+        </asp:CheckBoxList>
+        <br /><br />MỨC CHỐNG NƯỚC<br />
+        <asp:CheckBoxList ID="cbl_MucChongNuoc" runat="server" DataSourceID="SqlDataSource5" DataTextField="ChongNuoc" DataValueField="ChongNuoc">
+        </asp:CheckBoxList>
+        <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:QL_DONGHOConnectionString %>" SelectCommand="pro_chongNuoc" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+        <br /><br />TÍNH NĂNG<br />
+        <asp:CheckBoxList ID="cbl_TinhNang" runat="server">
+            <asp:ListItem>Không Lọc</asp:ListItem>
+            <asp:ListItem>Chronograph</asp:ListItem>
+            <asp:ListItem>Dạ Quang</asp:ListItem>
+            <asp:ListItem>La Bàn</asp:ListItem>
+            <asp:ListItem>World Time</asp:ListItem>
+            <asp:ListItem>Bluetooth</asp:ListItem>
+        </asp:CheckBoxList>
+        <div class="div_loc">
+            <asp:Button ID="btn_loc" CssClass="css_btn_loc" runat="server" Text="Lọc" Height="40px" Width="70px" OnClick="btn_loc_Click" />
+        </div>
+    </div>
+    
+    <div id="content">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="footer1">  
+        <table class="info_left" cellspacing="10">
+            <caption>HOTLINE: +84 39 6210 106</caption>
+            <tr>
+                <td class="auto-style6">Đơn vị: Trường Đại học Công nghiệp Thực phẩm TP.Hồ Chí Minh</td>
+            </tr>
+            <tr>
+                <td>Viết tắt: HUFI</td>
+            </tr>
+            <tr>
+                <td>Địa chỉ: 140, Lê Trọng Tấn, P. Tây Thạnh, Q. Tân Phú</td>
+            </tr>
+            <tr>
+                <td>Điện thoại: 0283 8163 318</td>
+            </tr>
+            <tr>
+                <td>Email: info@hufi.edu.vn</td>
+            </tr>
+        </table>
+        <table class="info_mid" cellpadding="10" border="1" >
+            <caption>SINH VIÊN THỰC HIỆN:<br /><br /></caption>
+            <tr>
+                <td>MSSV:</td>
+                <td>Họ tên:</td>
+                <td>Email:</td>
+                <td>Phone:</td>
+            </tr>
+            <tr>
+                <td>2001190836</td>
+                <td>Lê Văn Thông</td>
+                <td>levanthongqn35@gmail.com</td>
+                <td>0396210106</td>
+            </tr>
+            <tr>
+                <td>2001190806</td>
+                <td>Đăng Quốc Anh Thái</td>
+                <td>kaidang84@gmail.com</td>
+                <td>09416779927</td>
+            </tr>
+        </table>
+        <table class="info_right">
+            <caption>CHỨNG NHẬN</caption>
+            <tr>
+                <td>
+                    <asp:Image ID="img_1" ImageUrl="~/img/chungNhan1.jpg" runat="server" /></td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Image ID="img_2" runat="server" ImageUrl="~/img/chungNhan2.jpg" /></td>
+            </tr>
+        </table>
+    </div>
+    <div class="footer2">
+        <span>Copyright by sinh viên HUFI® Since 2021</span><br />
+        <span>Góp ý và Khiếu nại: levanthongqn35@gmail.com</span>
+    </div>
+ 
+    </form>
+    <style type="text/css">
+        .cta {position:fixed;right:0px;bottom:30px;width:90px;z-index:9999;}
+        .ctaitem {position: relative;visibility: visible;background-color: transparent;width: 90px;height: 90px;cursor: pointer;z-index: 9999;-webkit-backface-visibility: hidden;-webkit-transform: translateZ(0);transition: visibility .5s;left: 0;bottom: 0;display: block;}
+        .ctabg {width: 60px;height: 60px;top: 15px;left: 15px;position: absolute;box-shadow: 0 0 0 0 #dd3333;border-radius: 50%;border: 2px solid transparent;-webkit-animation: zigzag 2.3s infinite ease-in-out;animation: zigzag 2.3s infinite ease-in-out;transition: all .5s;-webkit-transform-origin: 50% 50%;-ms-transform-origin: 50% 50%;transform-origin: 50% 50%;-webkit-animuiion: zoom 1.3s infinite;animation: zoom 1.3s infinite;}
+        .ctaimg {width: 40px;height: 40px;line-height: 40px;top: 25px;left: 25px;position: absolute;border-radius: 50%;display: flex;justify-content: center;-webkit-animation: zigzag 2s infinite ease-in-out;animation: zigzag 2s infinite ease-in-out;}
+        .ctaimg a {display:block;}
+        .ctacontent {color: #fff;padding: 10px 15px;border-radius:99px;position:absolute;z-index:0;top:22px;transition-duration:2s;display:none;margin-left:-120px;font-size:100%;width:180px;transition-duration:2s;}
+        .ctaitem:hover .ctacontent {display:block;}
+        .ctamobile {position:fixed!important;right:0px;bottom:0px;width:100%;z-index:99999!important;}
+        .mobileicon {float:left;text-align:center;padding: 5px 0;position:relative;z-index:99999!important;border-right:1px solid #fff;}
+        .mobileicon img {width: 30px;}
+        .mobileicon p {margin-bottom:0;}
+        .mobileicon a {color: #fff;}
+        .mobileicon img {justify-content: center;-webkit-animation: zigzag 2s infinite ease-in-out;animation: zigzag 2s infinite ease-in-out;}@-webkit-keyframes zigzag {0% {-webkit-transform: rotate(0) scale(1) skew(1deg);}10% {-webkit-transform: rotate(-25deg) scale(1) skew(1deg);}20% {-webkit-transform: rotate(25deg) scale(1) skew(1deg);}30% {-webkit-transform: rotate(-25deg) scale(1) skew(1deg);}40% {-webkit-transform: rotate(25deg) scale(1) skew(1deg);}50% {-webkit-transform: rotate(0) scale(1) skew(1deg);}100% {-webkit-transform: rotate(0) scale(1) skew(1deg);}}@keyframes zigzag {0% {-webkit-transform: rotate(0) scale(1) skew(1deg);}10% {-webkit-transform: rotate(-25deg) scale(1) skew(1deg);}20% {-webkit-transform: rotate(25deg) scale(1) skew(1deg);}30% {-webkit-transform: rotate(-25deg) scale(1) skew(1deg);}40% {-webkit-transform: rotate(25deg) scale(1) skew(1deg);}50% {-webkit-transform: rotate(0) scale(1) skew(1deg);}100% {-webkit-transform: rotate(0) scale(1) skew(1deg);}}@-webkit-keyframes zoom{0%{transform:scale(.9)}70%{transform:scale(1);box-shadow:0 0 0 15px transparent}100%{transform:scale(.9);box-shadow:0 0 0 0 transparent}}@keyframes zoom{0%{transform:scale(.9)}70%{transform:scale(1);box-shadow:0 0 0 15px transparent}100%{transform:scale(.9);box-shadow:0 0 0 0 transparent}}
+        .auto-style6 {
+            height: 34px;
+        }
+    </style>
+    <div class="cta">
+    <div class="ctaitem">
+        <div class="ctabg" style="background: #dd3333"></div>
+        <div class="ctacontent" style="background: #dd3333">0941679927</div>
+        <div class="ctaimg" style="background: #dd3333"><a href="tel:0941679927"><img src="img/call.png" alt="Gọi điện" /></a></div>
+    </div>
+    <div class="ctaitem">
+        <div class="ctabg" style="background: #2196F3"></div>
+        <div class="ctacontent" style="background: #2196F3">Messenger</div>
+        <div class="ctaimg" style="background: #2196F3"><a href="https://m.me/100039053493163"><img src="img/mess.png" alt="Messenger"/></a></div>
+    </div>
+    <div class="ctaitem">
+        <div class="ctabg" style="background: #2196F3"></div>
+        <div class="ctacontent" style="background: #2196F3">Chat Zalo</div>
+        <div class="ctaimg" style="background: #2196F3"><a href="https://zalo.me/0941679927"><img src="img/zalo2.png"  alt="Chat Zalo"/></a></div>
+    </div>
+    <div class="ctaitem">
+        <div class="ctabg" style="background: #ffd800"></div>
+        <div class="ctacontent" style="background: #ffd800">Liên Hệ</div>
+        <div class="ctaimg" style="background: #ffd800"><a href="https://forms.gle/UZ3BT4LU12NSsxaSA"><img src="img/letter.png" alt="Liên hệ"/></a></div>
+    </div>
+</div>
+</body>
+</html>

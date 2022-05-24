@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Code ASP.NET(2)", "http://localhost:49651", "{CD88B540-1C3E-4B58-8A7C-3F56E31D1319}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_49651"
+		Debug.AspNetCompiler.PhysicalPath = "E:\HTML+CSS+JavaScript\2001190836_LeVanThong_2001190806_DangQuocAnhThai_WebBanDongHo\Code ASP.NET\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49651\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_49651"
+		Release.AspNetCompiler.PhysicalPath = "E:\HTML+CSS+JavaScript\2001190836_LeVanThong_2001190806_DangQuocAnhThai_WebBanDongHo\Code ASP.NET\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49651\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "E:\HTML+CSS+JavaScript\2001190836_LeVanThong_2001190806_DangQuocAnhThai_WebBanDongHo\Code ASP.NET\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD88B540-1C3E-4B58-8A7C-3F56E31D1319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD88B540-1C3E-4B58-8A7C-3F56E31D1319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

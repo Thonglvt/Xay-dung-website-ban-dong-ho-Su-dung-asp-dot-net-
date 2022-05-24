@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="" title=""  description="">
+        <siteMapNode url="TrangChu.aspx" title="Trang Chủ"  description="TrangChu page" />
+        <siteMapNode url="Nam.aspx?gender=Nam" title="Nam"  description="" />
+        <siteMapNode url="Nu.aspx?gender=Nữ" title="Nữ"  description="" />
+        <siteMapNode url="SuaChua.aspx" title="Sửa chữa"  description="SuaChua page" >
+          <siteMapNode url="" title="Thay Pin"  description="ThayPin page" />
+          <siteMapNode url="" title="Thay Kiếng"  description="ThayKieng page" />
+          <siteMapNode url="" title="Lau Dầu"  description="LauDau page" />
+          <siteMapNode url="" title="Vệ Sinh Đồng Hồ"  description="VSDH page" />
+          <siteMapNode url="" title="Sửa Chữa Máy"  description="SCM page" />
+          <siteMapNode url="" title="Đánh Bóng"  description="DanhBong page" />
+          <siteMapNode url="" title="Bảng Giá"  description="BangGia page" />
+        </siteMapNode>
+      <siteMapNode url="LienHe.aspx" title="Liên Hệ"  description="LienHe page" />
+    </siteMapNode>
+</siteMap>

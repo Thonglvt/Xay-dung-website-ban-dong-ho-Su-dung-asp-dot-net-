@@ -1,0 +1,155 @@
+﻿
+#form1 { width:1400px; min-height:1000px; margin:auto;  }
+.info_left {color:#eed9d9; float:left; margin:30px 0px 0px 10px;}
+.info_mid {color:#eed9d9; float:left; margin:30px 10px 0px 0px; text-align:center; }
+.info_right {color:#eed9d9; float:right; margin:30px 0px 0px 0px; }
+#search{height:50px;}
+#menu{height:30px; background-color:black; padding-top:6px; padding-left:100px; margin-bottom:10px;}
+.menu_left{float:left;margin:10px 0px 0px 30px;}
+#banner {height:300px; width:1300px;}
+.left {float:left; min-height:1000px; width:300px; /*background-color:#ffd800;*/ margin:150px 5px 0px 0px; position:relative;}
+#content {min-height:1000px;}
+.footer1{clear:both; height:280px; background-color:#800203;}
+.footer2{font-size:13px; color:#c3b8b8; text-align:center; clear:both; height:50px; background-color:#850f0f; border-top:solid 1px #CCCCCC; padding:5px 0px 0px 0px;}
+.tb_sanPham {width: 100%;border: 1px solid #CCCCCC; margin:0px 0px 0px 20px;}
+.row_sanPham {width: 320px;text-align:center;}
+.auto-style1 {width: 274%;
+}
+.auto-style2 {height: 26px;}
+.auto-style3 {height: 26px;width: 174px;}
+.auto-style4 {width: 174px;}
+.auto-style5 {width: 320px;text-align: center;height: 86px}
+.auto-style5:hover{opacity:70%; }
+.div_loc{position:fixed; top:700px;left:270px; }
+.css_btn_loc {border-radius:7px;}
+.btn_ {border-radius:7px}
+.css_txt{width:200px;}  
+
+.div_form{background-color:#b7b7b7;padding-top:30px; height:700px;}
+.form_dangNhap{height:460px;width:400px; background-color:#f8f8f8; margin-left:400px; text-align:center; padding-top:30px; border-radius:10px; }
+.form_dangNhapAdmin{height:280px;width:400px; background-color:#f1f1f1; margin-left:400px; text-align:center; padding-top:30px; border-radius:10px; }
+.table_dn{margin-left:50px; width:300px;}
+a{text-decoration:none;}
+a:hover{color:#ee0449}
+.imgb_1:hover{ opacity:70%;}
+.opa_{opacity:40%;}
+
+
+.form_dangKi{height:510px;width:550px; background-color:#f1f1f1; margin-left:400px; padding-top:30px; border-radius:10px;}
+.dauSaoDo{color:red;}
+.formDeltail{height:510px;width:600px; background-color:white; margin-left:400px; padding-top:30px; border-radius:10px;}
+.td_{text-align:right; width:130px;}
+.td_2 {text-align:center;width:300px;}
+/*.fb{width:100px;margin-left:50px;}*/
+
+.sanPham:hover {opacity:70%;}
+
+.ThanhCong{ height:500px;width:430px; background-color:#eaf567; margin-left:400px; text-align:center; padding-top:30px; border-radius:10px;}
+
+.left_admin {float:left;  width:900px; margin:30px 0px 0px 0px;}
+.right_admin{float:right; width:450px;height:680px;padding-left:5px;}
+.row_tail{font-size:18px;}
+.gv_ct {text-align:center;}
+
+.btnthemGio {background-color:#800203; }
+.btnDatHang {background-color:#b7b7b7;}
+
+.div_thanhToan{height:500px; width:416px; background-color:#f0f0f0;border-radius:7px; margin:auto;}
+/*.ghLeft{float:left;margin:200px 0px 0px 100px; text-align:center;}
+.ghRight{float:left; width:200px;  background-color:#affaa8;margin:200px 0px 0px 0px;}*/
+.tksoLuongSP{ height:170px;width:48%; float:left;border: 2px solid #0b22e6;text-align:center; border-radius:10px;background-color:antiquewhite}
+.tkDonDat{height:170px;width:48%; float:right;border: 2px solid #ed0be9;text-align:center; margin-left:10px;border-radius:10px; margin-top:0px;background-color:aliceblue}
+.tkDoanhThu {height:200px;width:45%; float:right; border: 2px solid #35fa07;text-align:center;border-radius:10px;background-color:lavender}
+
+.button {
+    text-align:center;
+    /*
+
+        Chúng ta sẽ tạo một hiệu ứng màu đen trắng kiểu gradient bằng cách giảm Opacity xuống còn 60%.
+
+        Với hiệu ứng gradient này, chúng ta sẽ kết hợp với 'background-color' để tạo ra các hiệu ứng chuyển động màu sắc sau này.
+
+    */
+    background-image: linear-gradient(
+
+        rgba(255,255,255,0.6),
+
+        rgba(0,0,0,0.6)
+
+    );
+    text-decoration:none;
+    display: inline-block;
+    height: 40px; width: 305px;
+    line-height:38px;
+    margin: 5px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+#rgb {
+    background-color: #7af1f6; /* Màu vàng */
+    animation: rgb 4s infinite alternate;
+    -webkit-animation: rgb 4s infinite alternate; /*Dùng cho Safari và Chrome*/
+}
+
+@keyframes rgb {
+
+    /* 0% sẽ có màu mặc định là màu vàng */
+    50% {background-color: #b8abab; /* Màu xanh*/ }
+    60% {background-color: #f04ae9; /* Màu đỏ */}
+}
+@-webkit-keyframes rgb {
+
+    /* 0% sẽ có màu mặc định là màu vàng */
+    50% {background-color: #b8abab; /* Màu xanh*/ }
+    100% {background-color: #f04ae9; /* Màu đỏ */}
+}
+.button1 {
+    text-align:center;
+    /*
+
+        Chúng ta sẽ tạo một hiệu ứng màu đen trắng kiểu gradient bằng cách giảm Opacity xuống còn 60%.
+
+        Với hiệu ứng gradient này, chúng ta sẽ kết hợp với 'background-color' để tạo ra các hiệu ứng chuyển động màu sắc sau này.
+
+    */
+    background-image: linear-gradient(
+
+        rgba(255,255,255,0.6),
+
+        rgba(0,0,0,0.6)
+
+    );
+    text-decoration:none;
+    display: inline-block;
+    width: 90px;
+    line-height:23px;
+    margin: 5px;
+    color: black;
+    font-size: 13px;
+    font-weight:bold;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+#namedcolors {
+
+    background-color: white;
+    animation: namedcolors 0.3s infinite alternate;
+    -webkit-animation: namedcolors 1s infinite alternate;/*Dùng cho Safari và Chrome*/
+
+}
+
+@keyframes namedcolors {
+
+    100% {background-color: #affaa8}
+}
+
+/*Dùng cho Safari và Chrome*/
+
+@-webkit-keyframes namedcolors {
+
+    100% {background-color: #affaa8;}
+}

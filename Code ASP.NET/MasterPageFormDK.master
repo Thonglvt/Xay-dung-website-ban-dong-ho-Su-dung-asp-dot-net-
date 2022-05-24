@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageFormDK.master.cs" Inherits="MasterPageFormDK" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Admin</title>
+    <meta charset="utf-8"/>
+    <link type="text/css" href='css/style.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" accept-charset="T">
+       <div style="margin-bottom:2px; background-color:#96a3a1; height:50px;">
+        <div style="float:left; margin-left:200px;margin-top:5px;">
+            <%--<asp:HyperLink ID="HyperLink1" runat="server" ImageHeight="50px" ImageUrl="~/img/name6.jpg" ImageWidth="200px" Font-Bold="False" NavigateUrl="~/TrangChu.aspx"></asp:HyperLink>--%>
+            <asp:HyperLink ID="HyperLink3" runat="server" ImageHeight="45px" ImageUrl="~/img/name9.gif" ImageWidth="200px" Font-Bold="False" NavigateUrl="~/TrangChu.aspx"></asp:HyperLink>
+        </div>
+        <div class="menu_left">
+            <table>
+                <tr>
+                    <td><asp:TextBox ID="txt_search" runat="server" Height="25px" Width="326px"></asp:TextBox></td>
+                    <td><asp:ImageButton ID="imgb_search" runat="server" ImageUrl="~/img/imgSearch.jpg" Height="29px" Width="48px" ImageAlign="Top" OnClick="imgb_search_Click" /> </td>
+                </tr>
+            </table>
+            <%--<asp:Button  ID="Button1" runat="server" Text="Tìm Kiếm"  Height="30px" OnClick="Button1_Click" />--%>
+        </div>
+        <a class="fas fa-cart-arrow-down" href="GioHang.aspx"  style="text-decoration:none;font-size:larger;margin-top:17px;margin-left:20px; margin-right:180px; color:white;">&nbsp;Giỏ hàng</a>
+        <a class="far fa-user" style="text-decoration:none;font-size:18px; color:black;">&nbsp;</a>
+        <%--<a class="button1" id="namedcolors" href="DangNhap.aspx">ĐĂNG NHẬP</a>&nbsp;<span style="color:white;">||</span>
+        <a class="button1" id="namedcolors" href="DangKi.aspx">ĐĂNG KÍ</a>--%>
+        <asp:HyperLink ID="hyp_user" runat="server" NavigateUrl="~/KhachHang.aspx"></asp:HyperLink>
+        <%--<asp:Label ID="lb_user" runat="server" ForeColor="Blue"></asp:Label>&nbsp;&nbsp;--%>
+        <asp:Button ID="btn_dangXuat" runat="server" Text="Đăng xuất" OnClick="btn_dangXuat_Click" />
+        <asp:Button ID="btn_dangNhap" runat="server" Text="Đăng Nhập"  CssClass="button1" Height="30px" OnClick="btn_dangNhap_Click"/>
+        <asp:Button ID="btn_dangKy" runat="server" Text="Đăng Ký" CssClass="button1" Height="30px" OnClick="btn_dangKy_Click" />
+        
+    </div>
+    <div id="menu">
+        <div style="float:left">
+            <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Font-Size="21px" Height="22px" Orientation="Horizontal" EnableTheming="True" ForeColor="White" StaticEnableDefaultPopOutImage="False" RenderingMode="List">
+                <DynamicHoverStyle ForeColor="#FF3300" />
+                <DynamicMenuItemStyle BorderStyle="None" Font-Size="Large" VerticalPadding="5px" ForeColor="Blue" />
+                <DynamicMenuStyle BackColor="#CCCCCC" />
+                <StaticHoverStyle ForeColor="#CC0000" />
+                <StaticMenuItemStyle HorizontalPadding="20px" />
+                <StaticMenuStyle Width="400px" />
+            </asp:Menu>
+            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+        </div>
+        <div style="float:right; margin-right:20px;"><a style="color:white;" href="DangNhapAdmin.aspx">Admin</a></div>
+    </div>
+    <div class="div_form">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="footer1">  
+        <table class="info_left" cellspacing="10">
+            <caption>HOTLINE: +84 39 6210 106</caption>
+            <tr>
+                <td>Đơn vị: Trường Đại học Công nghiệp Thực phẩm TP.Hồ Chí Minh</td>
+            </tr>
+            <tr>
+                <td>Viết tắt: HUFI</td>
+            </tr>
+            <tr>
+                <td>Địa chỉ: 140, Lê Trọng Tấn, P. Tây Thạnh, Q. Tân Phú</td>
+            </tr>
+            <tr>
+                <td>Điện thoại: 0283 8163 318</td>
+            </tr>
+            <tr>
+                <td>Email: info@hufi.edu.vn</td>
+            </tr>
+        </table>
+        <table class="info_mid" cellpadding="10" border="1" >
+            <caption>SINH VIÊN THỰC HIỆN:<br /><br /></caption>
+            <tr>
+                <td>MSSV:</td>
+                <td>Họ tên:</td>
+                <td>Email:</td>
+                <td>Phone:</td>
+            </tr>
+            <tr>
+                <td>2001190836</td>
+                <td>Lê Văn Thông</td>
+                <td>levanthongqn35@gmail.com</td>
+                <td>0396210106</td>
+            </tr>
+            <tr>
+                <td>2001190806</td>
+                <td>Đăng Quốc Anh Thái</td>
+                <td>kaidang84@gmail.com</td>
+                <td>09416779927</td>
+            </tr>
+        </table>
+        <table class="info_right">
+            <caption>CHỨNG NHẬN</caption>
+            <tr>
+                <td>
+                    <asp:Image ID="img_1" ImageUrl="~/img/chungNhan1.jpg" runat="server" /></td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Image ID="img_2" runat="server" ImageUrl="~/img/chungNhan2.jpg" /></td>
+            </tr>
+        </table>
+    </div>
+    <div class="footer2">
+        <span>Copyright by sinh viên HUFI® Since 2021</span><br />
+        <span>Góp ý và Khiếu nại: levanthongqn35@gmail.com</span>
+    </div>
+    </form>
+</body>
+</html>
